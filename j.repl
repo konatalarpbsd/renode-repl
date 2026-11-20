@@ -20,7 +20,6 @@ power: Python.PythonPeripheral @ sysbus 0x09100000
     size: 0x1000
     initable: true
     filename: "power_management.py"
-    -> gic@33
 */
 
 
@@ -30,10 +29,3 @@ efuse: Python.PythonPeripheral @ sysbus 0x10100000
     filename: "perh/efuse.py"
 
 
-/*
-sysbus:
-    init:
-        Tag <0x50010000, 0x50010004> "PERIPH_CTRL" 0x00000000
-        Tag <0x50010004, 0x50010008> "PERIPH_STATUS" 0x80000280
-
-*/
